@@ -1,3 +1,4 @@
+import { assets } from "@/assets/assets"
 export interface Nutrient {
   _id: string
   name: string
@@ -38,7 +39,7 @@ export const mockMenuItems: MenuItem[] = [
     price: 9.50,
     calories: 350,
     category: "Starters",
-    image: "https://images.unsplash.com/photo-1603048297172-c92544798d5e?auto=format&fit=crop&q=80&w=800",
+    image: assets.menu.avacado_toast,
     model3D: "/models/avocado.glb",
     nutrients: [
       { _id: "n5", name: "Good Fats", amount: "15g", benefit: "Heart health" },
@@ -94,7 +95,7 @@ export const mockMenuItems: MenuItem[] = [
     price: 14.50,
     calories: 780,
     category: "Starters",
-    image: "https://images.unsplash.com/photo-1569691899455-8ec1464c11f4?auto=format&fit=crop&q=80&w=800",
+    image: assets.menu.spicy_chicken_wings,
     model3D: "/models/wings.glb",
     nutrients: [
       { _id: "n17", name: "Protein", amount: "28g", benefit: "Muscle building" },
