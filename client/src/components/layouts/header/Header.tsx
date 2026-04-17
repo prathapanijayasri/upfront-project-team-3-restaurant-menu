@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/mode-toggle"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
@@ -32,7 +33,7 @@ export function Header() {
         
         {/* Desktop actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" className="text-sm">Sign In</Button>
+          <ModeToggle />
           <Button variant="default" size="sm" className="rounded-full px-6 shadow-md hover:shadow-lg transition-shadow">Order Now</Button>
         </div>
 
@@ -53,7 +54,10 @@ export function Header() {
                 <a href="/about" className="text-lg font-medium hover:text-primary transition-colors">About</a>
                 <a href="/contact" className="text-lg font-medium hover:text-primary transition-colors">Contact</a>
                 <div className="border-t my-4 pt-4 flex flex-col gap-4">
-                  <Button variant="outline" className="w-full">Sign In</Button>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-medium">Theme</span>
+                    <ModeToggle />
+                  </div>
                   <Button variant="default" className="w-full">Order Now</Button>
                 </div>
               </nav>
